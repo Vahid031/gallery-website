@@ -1,5 +1,5 @@
 import React from 'react';
-import { useIntl } from 'react-intl';
+import { useTranslation } from 'react-i18next';
 import {
   ProSidebar,
   Menu,
@@ -10,10 +10,10 @@ import {
   SidebarContent,
 } from 'react-pro-sidebar';
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
-import sidebarBg from './assets/bg2.jpg';
+import sidebarBg from './assets/bg1.jpg';
 
 const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
-  const intl = useIntl();
+  const {t} = useTranslation();
   return (
     <ProSidebar
       image={image ? sidebarBg : false}
@@ -36,7 +36,7 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
             whiteSpace: 'nowrap',
           }}
         >
-          {intl.formatMessage({ id: 'sidebarTitle' })}
+          {t("sidebarTitle")}
         </div>
       </SidebarHeader>
 
@@ -44,41 +44,41 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
         <Menu iconShape="circle">
           <MenuItem
             icon={<FaTachometerAlt />}
-            suffix={<span className="badge red">{intl.formatMessage({ id: 'new' })}</span>}
+            suffix={<span className="badge red">{t("new")}</span>}
           >
-            {intl.formatMessage({ id: 'dashboard' })}
+            {t("dashboard")}
           </MenuItem>
-          <MenuItem icon={<FaGem />}> {intl.formatMessage({ id: 'components' })}</MenuItem>
+          <MenuItem icon={<FaGem />}> {t("components")}</MenuItem>
         </Menu>
         <Menu iconShape="circle">
           <SubMenu
             suffix={<span className="badge yellow">3</span>}
-            title={intl.formatMessage({ id: 'withSuffix' })}
+            title={t("withSuffix")}
             icon={<FaRegLaughWink />}
           >
-            <MenuItem>{intl.formatMessage({ id: 'submenu' })} 1</MenuItem>
-            <MenuItem>{intl.formatMessage({ id: 'submenu' })} 2</MenuItem>
-            <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3</MenuItem>
+            <MenuItem>{t("submenu")} 1</MenuItem>
+            <MenuItem>{t("submenu")} 2</MenuItem>
+            <MenuItem>{t("submenu")} 3</MenuItem>
           </SubMenu>
           <SubMenu
             prefix={<span className="badge gray">3</span>}
-            title={intl.formatMessage({ id: 'withPrefix' })}
+            title={t("withPrefix")}
             icon={<FaHeart />}
           >
-            <MenuItem>{intl.formatMessage({ id: 'submenu' })} 1</MenuItem>
-            <MenuItem>{intl.formatMessage({ id: 'submenu' })} 2</MenuItem>
-            <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3</MenuItem>
+            <MenuItem>{t("submenu")} 1</MenuItem>
+            <MenuItem>{t("submenu")} 2</MenuItem>
+            <MenuItem>{t("submenu")} 3</MenuItem>
           </SubMenu>
-          <SubMenu title={intl.formatMessage({ id: 'multiLevel' })} icon={<FaList />}>
-            <MenuItem>{intl.formatMessage({ id: 'submenu' })} 1 </MenuItem>
-            <MenuItem>{intl.formatMessage({ id: 'submenu' })} 2 </MenuItem>
-            <SubMenu title={`${intl.formatMessage({ id: 'submenu' })} 3`}>
-              <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.1 </MenuItem>
-              <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.2 </MenuItem>
-              <SubMenu title={`${intl.formatMessage({ id: 'submenu' })} 3.3`}>
-                <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.3.1 </MenuItem>
-                <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.3.2 </MenuItem>
-                <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.3.3 </MenuItem>
+          <SubMenu title={t("multiLevel")} icon={<FaList />}>
+            <MenuItem>{t("submenu")} 1 </MenuItem>
+            <MenuItem>{t("submenu")} 2 </MenuItem>
+            <SubMenu title={`${t("submenu")} 3`}>
+              <MenuItem>{t("submenu")} 3.1 </MenuItem>
+              <MenuItem>{t("submenu")} 3.2 </MenuItem>
+              <SubMenu title={`${t("submenu")} 3.3`}>
+                <MenuItem>{t("submenu")} 3.3.1 </MenuItem>
+                <MenuItem>{t("submenu")} 3.3.2 </MenuItem>
+                <MenuItem>{t("submenu")} 3.3.3 </MenuItem>
               </SubMenu>
             </SubMenu>
           </SubMenu>
@@ -100,7 +100,7 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
           >
             <FaGithub />
             <span style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
-              {intl.formatMessage({ id: 'viewSource' })}
+              {t("viewSource")}
             </span>
           </a>
         </div>

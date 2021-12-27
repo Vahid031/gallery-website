@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Aside from './Aside';
 import Main from './Main';
+import i18n from './i18nextConf';
 
-function Layout({ setLocale }) {
+function Layout() {
   const [rtl, setRtl] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
   const [image, setImage] = useState(true);
@@ -12,9 +13,13 @@ function Layout({ setLocale }) {
     setCollapsed(checked);
   };
 
+  useEffect(() => {
+    i18n.changeLanguage("en");
+  }, []);
+
   const handleRtlChange = (checked) => {
     setRtl(checked);
-    setLocale(checked ? 'fa' : 'en');
+    i18n.changeLanguage(checked ? 'fa' : 'en');
   };
   const handleImageChange = (checked) => {
     setImage(checked);

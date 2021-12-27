@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
-import { IntlProvider } from 'react-intl';
+import React, { Suspense } from 'react';
 import Layout from './Layout';
-import messages from './messages';
+// import {
+//   BrowserRouter,
+//   Routes, // instead of "Switch"
+//   Route,
+// } from "react-router-dom";
 import './styles/App.scss';
 
-function App() {
-  const [locale, setLocale] = useState('en');
 
-  return (
-    <IntlProvider locale={locale} messages={messages[locale]}>
-      <Layout setLocale={setLocale} />
-    </IntlProvider>
-  );
+const loading = (
+  <div>
+    loading.......
+  </div>
+)
+
+function App() {
+    return (
+      <Suspense fallback={loading}>
+        <Layout />         
+      </Suspense>
+    );
 }
 
 export default App;

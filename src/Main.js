@@ -1,8 +1,9 @@
 import React from 'react';
-import { useIntl } from 'react-intl';
 import Switch from 'react-switch';
 import { FaHeart, FaBars } from 'react-icons/fa';
 import reactLogo from './assets/logo.svg';
+import { useTranslation } from 'react-i18next';
+import i18n from './i18nextConf';
 
 const Main = ({
   collapsed,
@@ -13,17 +14,24 @@ const Main = ({
   handleRtlChange,
   handleImageChange,
 }) => {
-  const intl = useIntl();
+  const { t } = useTranslation();
+
   return (
     <main>
       <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
+
+        </div>
+        <div className="App-intro">
         <FaBars />
       </div>
       <header>
+      <button onClick={() => i18n.changeLanguage("fa")}>fa</button>
+          <button onClick={() =>  i18n.changeLanguage("en")}>en</button>
         <h1>
-          <img width={80} src={reactLogo} alt="react logo" /> {intl.formatMessage({ id: 'title' })}
+          <img width={80} src={reactLogo} alt="react logo" /> 
+          {t("title")}
         </h1>
-        <p>{intl.formatMessage({ id: 'description' })}</p>
+        {/* <p>{t("description")}</p> */}
         <div className="social-bagdes">
           <a
             href="https://github.com/azouaoui-med/react-pro-sidebar"
@@ -58,7 +66,7 @@ const Main = ({
           onColor="#219de9"
           offColor="#bbbbbb"
         />
-        <span> {intl.formatMessage({ id: 'collapsed' })}</span>
+        {/* <span> {t("collapsed")}</span> */}
       </div>
       <div className="block">
         <Switch
@@ -71,7 +79,7 @@ const Main = ({
           onColor="#219de9"
           offColor="#bbbbbb"
         />
-        <span> {intl.formatMessage({ id: 'rtl' })}</span>
+        {/* <span> {t("rtl")}</span> */}
       </div>
       <div className="block">
         <Switch
@@ -84,7 +92,7 @@ const Main = ({
           onColor="#219de9"
           offColor="#bbbbbb"
         />
-        <span> {intl.formatMessage({ id: 'image' })}</span>
+        {/* <span> {t("image")}</span> */}
       </div>
 
       <footer>
