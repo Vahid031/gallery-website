@@ -17,11 +17,10 @@ const Main = ({
 
   return (
     <main>
-      <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
-
+      <div className="btn-toggle" >
         </div>
         <div className="App-intro">
-        <FaBars />
+        <FaBars onClick={() => handleToggleSidebar(true)} />
       </div>
       <header>
 
@@ -29,7 +28,7 @@ const Main = ({
           <img width={80} src={reactLogo} alt="react logo" /> 
           {t("title")}
         </h1>
-        {/* <p>{t("description")}</p> */}
+        <p>{t("description")}</p>
         <div className="social-bagdes">
           <a
             href="https://github.com/vahid031/gallery-website"
@@ -64,7 +63,7 @@ const Main = ({
           onColor="#219de9"
           offColor="#bbbbbb"
         />
-        {/* <span> {t("collapsed")}</span> */}
+        <span> {t("collapsed")}</span>
       </div>
       <div className="block">
         <Switch
@@ -77,7 +76,7 @@ const Main = ({
           onColor="#219de9"
           offColor="#bbbbbb"
         />
-        {/* <span> {t("rtl")}</span> */}
+        <span> {t("rtl")}</span>
       </div>
       <div className="block">
         <Switch
@@ -90,7 +89,7 @@ const Main = ({
           onColor="#219de9"
           offColor="#bbbbbb"
         />
-        {/* <span> {t("image")}</span> */}
+        <span> {t("image")}</span>
       </div>
 
       <footer>
@@ -108,7 +107,7 @@ const Main = ({
               src="https://img.shields.io/github/followers/vahid031?label=github&style=social"
             />
           </a>
-          <a href="https://twitter.com/azouaoui_med" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/Vahid031" target="_blank" rel="noopener noreferrer">
             <img
               alt="Twitter Follow"
               src="https://img.shields.io/twitter/follow/vahid031?label=twitter&style=social"
