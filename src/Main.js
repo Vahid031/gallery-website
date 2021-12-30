@@ -18,10 +18,8 @@ const Main = ({
   return (
     <main>
       <div className="btn-toggle" >
-        </div>
-        <div className="App-intro">
         <FaBars onClick={() => handleToggleSidebar(true)} />
-      </div>
+        </div>
       <header>
 
         <h1>
