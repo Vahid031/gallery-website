@@ -9,15 +9,15 @@ import {
   SidebarFooter,
   SidebarContent,
 } from 'react-pro-sidebar';
-import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart, FaWindowMinimize, FaWindowMaximize } from 'react-icons/fa';
+import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import sidebarBg from './assets/bg1.jpg';
 
-const Aside = ({ image, rtl, toggled, handleToggleSidebar }) => {
+const Aside = ({ rtl, toggled, handleToggleSidebar }) => {
   const {t} = useTranslation();
   const [collapse, setCollapse] = useState(false);
   return (
     <ProSidebar
-      image={image ? sidebarBg : false}
+      image={ sidebarBg }
       rtl={rtl}
       collapsed={collapse}
       toggled={toggled}
@@ -25,9 +25,14 @@ const Aside = ({ image, rtl, toggled, handleToggleSidebar }) => {
       onToggle={handleToggleSidebar}
     >
       <SidebarHeader>
-      <button type='button' style={{float:"right"}} onClick={() => setCollapse(!collapse)}>
-        { collapse ? <FaWindowMaximize />: <FaWindowMinimize /> }
-        </button>
+
+      
+
+
+      <div style={{float: rtl ? "left": "right", padding:"20px 24px", cursor:"pointer"}} onClick={() => setCollapse(!collapse)}>
+        { collapse ^ rtl ? <FaChevronRight />: <FaChevronLeft /> }
+        </div>
+        { collapse ? null :
         <div
           style={{
             padding: '24px',
@@ -41,7 +46,7 @@ const Aside = ({ image, rtl, toggled, handleToggleSidebar }) => {
           }}
         >
           {t("sidebarTitle")}
-        </div>
+        </div> }
       
       </SidebarHeader>
 
@@ -98,7 +103,7 @@ const Aside = ({ image, rtl, toggled, handleToggleSidebar }) => {
           }}
         >
           <a
-            href="https://github.com/azouaoui-med/react-pro-sidebar"
+            href="https://github.com/Vahid031/gallery-website"
             target="_blank"
             className="sidebar-btn"
             rel="noopener noreferrer"

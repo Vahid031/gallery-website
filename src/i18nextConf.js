@@ -6,13 +6,13 @@ import translationEN from "./assets/translation/en.json";
 import translationFA from "./assets/translation/fa.json";
 
 const fallbackLng = ["en"];
-const availableLanguages = ["en", "fa"];
+const availableLanguages = ["en-US", "fa-IR"];
 
 const resources = {
-  en: {
+  "en-US": {
     translation: translationEN
   },
-  fa: {
+  "fa-IR": {
     translation: translationFA
   }
 };

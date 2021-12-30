@@ -22,9 +22,8 @@ const loading = (
 
 function App() {
   return (
-    <div>
-      <GlobalCss />
       <BrowserRouter>
+      <GlobalCss />
         <Suspense fallback={loading}>
           <Routes>
             <Route exact path="/login" element={<Login />} />
@@ -36,7 +35,6 @@ function App() {
           </Routes>
         </Suspense>
       </BrowserRouter>
-    </div>
   );
 }
 

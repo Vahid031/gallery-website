@@ -5,13 +5,9 @@ import reactLogo from './assets/logo.svg';
 import { useTranslation } from 'react-i18next';
 
 const Main = ({
-  collapsed,
   rtl,
-  image,
   handleToggleSidebar,
-  handleCollapsedChange,
   handleRtlChange,
-  handleImageChange,
 }) => {
   const { t } = useTranslation();
 
@@ -20,6 +16,19 @@ const Main = ({
       <div className="btn-toggle" >
         <FaBars onClick={() => handleToggleSidebar(true)} />
         </div>
+        <div className="btn-toggle">
+        <Switch
+          height={16}
+          width={30}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          onChange={handleRtlChange}
+          checked={rtl}
+          onColor="#219de9"
+          offColor="#bbbbbb"
+        />
+        <span> {t("rtl")}</span>
+      </div>
       <header>
 
         <h1>
@@ -50,44 +59,9 @@ const Main = ({
           </a>
         </div>
       </header>
-      <div className="block ">
-        <Switch
-          height={16}
-          width={30}
-          checkedIcon={false}
-          uncheckedIcon={false}
-          onChange={handleCollapsedChange}
-          checked={collapsed}
-          onColor="#219de9"
-          offColor="#bbbbbb"
-        />
-        <span> {t("collapsed")}</span>
-      </div>
+      
       <div className="block">
-        <Switch
-          height={16}
-          width={30}
-          checkedIcon={false}
-          uncheckedIcon={false}
-          onChange={handleRtlChange}
-          checked={rtl}
-          onColor="#219de9"
-          offColor="#bbbbbb"
-        />
-        <span> {t("rtl")}</span>
-      </div>
-      <div className="block">
-        <Switch
-          height={16}
-          width={30}
-          checkedIcon={false}
-          uncheckedIcon={false}
-          onChange={handleImageChange}
-          checked={image}
-          onColor="#219de9"
-          offColor="#bbbbbb"
-        />
-        <span> {t("image")}</span>
+       content .........
       </div>
 
       <footer>
