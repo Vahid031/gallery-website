@@ -33,7 +33,7 @@ function App() {
             <Route exact path="/404" element={<Page404 />} />
             <Route exact path="/500" element={<Page500 />} />
             <Route path="/" element={<Layout />} />
-            <Route path="*" element={<div >No page found</div>} />
+            {/* <Route path="*" element={<div >No page found</div>} /> */}
           </Routes>
         </Suspense>
       </BrowserRouter>
