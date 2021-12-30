@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/ReactCoreUI/static/css/main.d7d8f7e0.chunk.css",
-    "main.js": "/ReactCoreUI/static/js/main.ded9a107.chunk.js",
-    "main.js.map": "/ReactCoreUI/static/js/main.ded9a107.chunk.js.map",
-    "runtime-main.js": "/ReactCoreUI/static/js/runtime-main.b532aa85.js",
-    "runtime-main.js.map": "/ReactCoreUI/static/js/runtime-main.b532aa85.js.map",
-    "static/js/2.d4a58753.chunk.js": "/ReactCoreUI/static/js/2.d4a58753.chunk.js",
-    "static/js/2.d4a58753.chunk.js.map": "/ReactCoreUI/static/js/2.d4a58753.chunk.js.map",
-    "index.html": "/ReactCoreUI/index.html",
-    "precache-manifest.9a38e59debea8fcf54717c742c09e506.js": "/ReactCoreUI/precache-manifest.9a38e59debea8fcf54717c742c09e506.js",
-    "service-worker.js": "/ReactCoreUI/service-worker.js",
-    "static/css/main.d7d8f7e0.chunk.css.map": "/ReactCoreUI/static/css/main.d7d8f7e0.chunk.css.map",
-    "static/js/2.d4a58753.chunk.js.LICENSE.txt": "/ReactCoreUI/static/js/2.d4a58753.chunk.js.LICENSE.txt",
-    "static/media/bg1.jpg": "/ReactCoreUI/static/media/bg1.74aaeeb9.jpg",
-    "static/media/dreamer.svg": "/ReactCoreUI/static/media/dreamer.1427b7a9.svg",
-    "static/media/logo.svg": "/ReactCoreUI/static/media/logo.5d5d9eef.svg",
-    "static/media/posting-photo.svg": "/ReactCoreUI/static/media/posting-photo.e55dcfb8.svg"
+    "main.css": "/gallery-website/static/css/main.d7d8f7e0.chunk.css",
+    "main.js": "/gallery-website/static/js/main.e41b9000.chunk.js",
+    "main.js.map": "/gallery-website/static/js/main.e41b9000.chunk.js.map",
+    "runtime-main.js": "/gallery-website/static/js/runtime-main.5daaee5e.js",
+    "runtime-main.js.map": "/gallery-website/static/js/runtime-main.5daaee5e.js.map",
+    "static/js/2.d4a58753.chunk.js": "/gallery-website/static/js/2.d4a58753.chunk.js",
+    "static/js/2.d4a58753.chunk.js.map": "/gallery-website/static/js/2.d4a58753.chunk.js.map",
+    "index.html": "/gallery-website/index.html",
+    "precache-manifest.6e16ba02a5828072a7a7787e36f1ca57.js": "/gallery-website/precache-manifest.6e16ba02a5828072a7a7787e36f1ca57.js",
+    "service-worker.js": "/gallery-website/service-worker.js",
+    "static/css/main.d7d8f7e0.chunk.css.map": "/gallery-website/static/css/main.d7d8f7e0.chunk.css.map",
+    "static/js/2.d4a58753.chunk.js.LICENSE.txt": "/gallery-website/static/js/2.d4a58753.chunk.js.LICENSE.txt",
+    "static/media/bg1.jpg": "/gallery-website/static/media/bg1.74aaeeb9.jpg",
+    "static/media/dreamer.svg": "/gallery-website/static/media/dreamer.1427b7a9.svg",
+    "static/media/logo.svg": "/gallery-website/static/media/logo.5d5d9eef.svg",
+    "static/media/posting-photo.svg": "/gallery-website/static/media/posting-photo.e55dcfb8.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b532aa85.js",
+    "static/js/runtime-main.5daaee5e.js",
     "static/js/2.d4a58753.chunk.js",
     "static/css/main.d7d8f7e0.chunk.css",
-    "static/js/main.ded9a107.chunk.js"
+    "static/js/main.e41b9000.chunk.js"
   ]
 }
