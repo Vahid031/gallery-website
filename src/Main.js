@@ -1,8 +1,8 @@
 import React from 'react';
-import Switch from 'react-switch';
-import { FaHeart, FaBars } from 'react-icons/fa';
+import { FaHeart, FaBars, } from 'react-icons/fa';
 import reactLogo from './assets/logo.svg';
 import { useTranslation } from 'react-i18next';
+import ReactCountryFlag from "react-country-flag"
 
 const Main = ({
   rtl,
@@ -14,25 +14,16 @@ const Main = ({
   return (
     <main>
       <div className="btn-toggle" >
-        <FaBars onClick={() => handleToggleSidebar(true)} />
-        </div>
-        <div className="btn-toggle">
-        <Switch
-          height={16}
-          width={30}
-          checkedIcon={false}
-          uncheckedIcon={false}
-          onChange={handleRtlChange}
-          checked={rtl}
-          onColor="#219de9"
-          offColor="#bbbbbb"
-        />
-        <span> {t("rtl")}</span>
+        <FaBars onClick={() => handleToggleSidebar(true)} style={rtl? {marginLeft:"1em"}:{marginRight:"1em"}} />
+        {rtl ?
+          <ReactCountryFlag countryCode="IR" svg title="Fa" style={{ cursor: "pointer" }} onClick={() => handleRtlChange(false)} />:
+          <ReactCountryFlag countryCode="US" svg title="US" style={{ cursor: "pointer" }} onClick={() => handleRtlChange(true)} /> }
       </div>
+
       <header>
 
         <h1>
-          <img width={80} src={reactLogo} alt="react logo" /> 
+          <img width={80} src={reactLogo} alt="react logo" />
           {t("title")}
         </h1>
         <p>{t("description")}</p>
@@ -59,9 +50,9 @@ const Main = ({
           </a>
         </div>
       </header>
-      
+
       <div className="block">
-       content .........
+        content .........
       </div>
 
       <footer>
