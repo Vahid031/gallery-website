@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import Layout from './Layout';
 import {
+  Route,
   BrowserRouter,
   Routes,
-  Route,
 } from "react-router-dom";
 import './styles/App.scss';
 import Page404 from './components/pages/Page404';
@@ -22,19 +22,20 @@ const loading = (
 
 function App() {
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       <GlobalCss />
-        <Suspense fallback={loading}>
-          <Routes>
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/forgot-password" element={<ForgotPassword />} />
-            <Route exact path="/register" element={<Register />} />
-            <Route exact path="/404" element={<Page404 />} />
-            <Route exact path="/500" element={<Page500 />} />
-            <Route path="*" element={<Layout />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
+      <Suspense fallback={loading}>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/404" element={<Page404 />} />
+          <Route path="/500" element={<Page500 />} />
+          <Route path="/" element={<Layout />} />
+          <Route path="*" element={<div>not found....</div>} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 

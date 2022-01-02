@@ -23,14 +23,15 @@ body {
 .app {
   height: 100%;
   display: flex;
-  position: relative;
+  // position: relative;
 
   .btn-toggle {
     display: flex;
-    cursor: pointer;
+    
 
     & > * {
        display: none;
+       cursor: pointer;
     }
 
   }
@@ -130,7 +131,7 @@ body {
       }
     }
     .block {
-      direction: rtl;
+      // direction: rtl;
       > span {
         margin-left: 0;
         margin-right: 10px;
@@ -159,11 +160,6 @@ body {
       display: flex;
     }
 
-    &.rtl {
-      .btn-toggle {
-        margin-left: auto;
-      }
-    }
   }
 }
 
