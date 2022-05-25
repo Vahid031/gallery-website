@@ -7,7 +7,6 @@ import {
     Button,
     CircularProgress,
 } from '@material-ui/core'
-import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator'
 import image from '../../assets/dreamer.svg'
 import { makeStyles } from '@material-ui/core/styles'
 // import history from 'history.js'
@@ -82,7 +81,7 @@ const Login = () => {
                     </Grid>
                     <Grid item lg={7} md={7} sm={7} xs={12}>
                         <div className="p-8 h-full bg-light-gray relative">
-                            <ValidatorForm onSubmit={handleFormSubmit}>
+                            {/* <ValidatorForm onSubmit={handleFormSubmit}>
                                 <TextValidator
                                     className="mb-6 w-full"
                                     variant="outlined"
@@ -169,7 +168,7 @@ const Login = () => {
                                         Forgot password?
                                     </Button>
                                 </Link>
-                            </ValidatorForm>
+                            </ValidatorForm> */}
                         </div>
                     </Grid>
                 </Grid>

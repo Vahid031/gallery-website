@@ -1,19 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {StrictMode} from 'react';
 import App from './App';
 import './i18nextConf';
 import GlobalCss from './styles/GlobalCss';
+import {createRoot} from 'react-dom/client';
 import {
   BrowserRouter as Router,
 } from "react-router-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
+const rootelement = document.getElementById('root');
+const root = createRoot(rootelement);
+
+root.render(
+  <StrictMode>
     <GlobalCss />
     <Router>
-      <App />
+    <App />
     </Router>
-  </React.StrictMode>
-  ,
-  document.getElementById('root'),
+  </StrictMode>,
 );
