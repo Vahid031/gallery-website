@@ -3,6 +3,7 @@ import { FaHeart, FaBars, } from 'react-icons/fa';
 import reactLogo from './assets/logo.svg';
 import { useTranslation } from 'react-i18next';
 import ReactCountryFlag from "react-country-flag"
+import TheProduct from './components/views/TheProduct';
 
 const Main = ({
   rtl,
@@ -53,6 +54,8 @@ const Main = ({
 
       <div className="block">
         content .........
+
+        <TheProduct></TheProduct>
       </div>
 
       <footer>
